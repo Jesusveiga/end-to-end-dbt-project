@@ -7,6 +7,10 @@ sources:
         description: "This table contains customer information including names, contact details, and demographics."
       - name: orders
         description: "This table contains order details including order ID, customer ID, order date, and total amount."
+        loaded_at_field: event_time
+        freshness:
+              warn_after: {count: 5, period: day}
+              error_after: {count: 20, period: day}
 
   - name: payments
     database: raw_data
