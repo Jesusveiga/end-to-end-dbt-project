@@ -1,6 +1,7 @@
 {{ config(
-    materialized='view',
-    tags=['stg_app_orders', 'staging']
+    materialized='incremental',
+    incremental_strategy = "merge",
+    unique_key = "event_id"
 ) }}
 
 WITH initial_stg_app_orders AS (
@@ -34,3 +35,8 @@ final_stg_spp_app_orders AS (
 
 SELECT * 
 FROM final_stg_spp_app_orders
+{% if is_incremental() %}
+-- Incremental load: only process new records based on event_time
+    WHERE event_time > (SELECT MAX(event_time) FROM {{ this }})
+{% endif %}
+order by event_time desc
