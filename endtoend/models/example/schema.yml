@@ -1,0 +1,74 @@
+
+version: 2
+
+models:
+  - name: stg_app__customers
+    description: "Staging table for customer data before transformation."
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "The full name of the customer"
+      - name: singup_date
+        description: "The date when the customer signed up"
+      - name: region
+        description: "The geographical region of the customer"
+    
+  - name: stg_app__orders
+    description: "Staging table with flattened order JSON from the payload column."
+    columns:
+      - name: order_id
+        description: "Unique identifier of the order."
+        tests:
+          - not_null
+          - unique
+      - name: amount_total
+        description: "Total amount of the order."
+        tests:
+          - not_null
+      - name: status
+        description: "Status of the order (success, pending, failed, etc.)"
+        tests:
+          - not_null
+      - name: customer_identifier
+        description: "Customer ID extracted from payload customer_info.id. May be null if user_id is used."
+      - name: user_id
+        description: "Fallback user_id if customer_info.id is null."
+      - name: customer_id
+        description: "Resolved customer ID using COALESCE(customer_identifier, user_id)."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_app_customers')
+              field: id
+      
+      - name: stg_app_payments
+    description: "Staging table for payments, deduplicated by payment_id using QUALIFY and ROW_NUMBER."
+    columns:
+      - name: payment_id
+        description: "Unique identifier for each payment."
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: "Identifier for the related order."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_app_orders')
+              field: order_id
+      - name: amount_usd
+        description: "Payment amount in usd."
+        tests:
+          - not_null
+      - name: status
+        description: "Payment status (e.g., success, failed)."
+        tests:
+          - not_null
+      - name: created_at
+        description: "Timestamp of the payment event."
+        tests:
+          - not_null

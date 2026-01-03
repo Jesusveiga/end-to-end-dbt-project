@@ -1,0 +1,139 @@
+[0m13:24:06.986541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F508274D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F539AF830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F539AF500>]}
+
+
+============================== 13:24:06.986541 | d83e64d4-104e-4cfa-bc4d-91343f73fe5b ==============================
+[0m13:24:06.986541 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:24:06.986541 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\jesus.veiga\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:24:21.916523 [debug] [MainThread]: Starter project path: C:\Users\jesus.veiga\end to end dbt project\venv\Lib\site-packages\dbt\include\starter_project
+[0m13:24:21.973323 [info ] [MainThread]: 
+Your new dbt project "endtoend" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:24:21.974316 [info ] [MainThread]: Setting up your profile.
+[0m13:24:28.876771 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:24:28.876771 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:24:28.876771 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:28:22.502267 [info ] [MainThread]: Profile endtoend written to C:\Users\jesus.veiga\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:28:22.502267 [debug] [MainThread]: Command `dbt init` succeeded at 13:28:22.502267 after 255.77 seconds
+[0m13:28:22.502267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F56091400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F55B42240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F539F80E0>]}
+[0m13:28:22.502267 [debug] [MainThread]: Flushing usage events
+[0m13:28:23.225663 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:28:35.852608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B240B27380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B244EA2780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B244EA28D0>]}
+
+
+============================== 13:28:35.852608 | 6f41bd4e-18fb-45de-896c-1b8746fb203a ==============================
+[0m13:28:35.852608 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:28:35.867615 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\jesus.veiga\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:28:35.904467 [info ] [MainThread]: dbt version: 1.11.2
+[0m13:28:35.904467 [info ] [MainThread]: python version: 3.12.10
+[0m13:28:35.904467 [info ] [MainThread]: python path: C:\Users\jesus.veiga\end to end dbt project\venv\Scripts\python.exe
+[0m13:28:35.919144 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m13:28:36.298610 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:28:36.298610 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:28:36.298610 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:28:36.340689 [info ] [MainThread]: Using profiles dir at C:\Users\jesus.veiga\.dbt
+[0m13:28:36.340689 [info ] [MainThread]: Using profiles.yml file at C:\Users\jesus.veiga\.dbt\profiles.yml
+[0m13:28:36.340689 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\jesus.veiga\end to end dbt project\dbt_project.yml
+[0m13:28:36.340689 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:28:36.352201 [debug] [MainThread]: Command `dbt debug` failed at 13:28:36.352201 after 0.72 seconds
+[0m13:28:36.352201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B243ED41A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2466B63F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B2466B4EC0>]}
+[0m13:28:36.352201 [debug] [MainThread]: Flushing usage events
+[0m13:28:37.069066 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:33:44.888247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDCFCC5970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDD37611C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDD3761040>]}
+
+
+============================== 13:33:44.888247 | 00ef1523-522b-4a3e-b929-073fc1177bdf ==============================
+[0m13:33:44.888247 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:33:44.888247 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\jesus.veiga\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug --profile endtoend', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:33:44.924620 [info ] [MainThread]: dbt version: 1.11.2
+[0m13:33:44.925676 [info ] [MainThread]: python version: 3.12.10
+[0m13:33:44.925676 [info ] [MainThread]: python path: C:\Users\jesus.veiga\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+[0m13:33:44.926633 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m13:33:45.686611 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:33:45.686611 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:33:45.686611 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:33:45.736979 [info ] [MainThread]: Using profiles dir at C:\Users\jesus.veiga\.dbt
+[0m13:33:45.736979 [info ] [MainThread]: Using profiles.yml file at C:\Users\jesus.veiga\.dbt\profiles.yml
+[0m13:33:45.736979 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\jesus.veiga\end to end dbt project\dbt_project.yml
+[0m13:33:45.736979 [info ] [MainThread]: adapter type: snowflake
+[0m13:33:45.736979 [info ] [MainThread]: adapter version: 1.11.0
+[0m13:33:45.736979 [info ] [MainThread]: Configuration:
+[0m13:33:45.736979 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:33:45.736979 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:33:45.736979 [info ] [MainThread]: Required dependencies:
+[0m13:33:45.736979 [debug] [MainThread]: Executing "git --help"
+[0m13:33:45.806153 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:33:45.806153 [debug] [MainThread]: STDERR: "b''"
+[0m13:33:45.806153 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:33:45.806153 [info ] [MainThread]: Connection:
+[0m13:33:45.806153 [info ] [MainThread]:   account: ORLOBTV-BG80283
+[0m13:33:45.806153 [info ] [MainThread]:   user: JESUVM7
+[0m13:33:45.806153 [info ] [MainThread]:   database: RAW_DATA
+[0m13:33:45.806153 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m13:33:45.806153 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m13:33:45.806153 [info ] [MainThread]:   schema: STRIPE
+[0m13:33:45.806153 [info ] [MainThread]:   authenticator: None
+[0m13:33:45.819325 [info ] [MainThread]:   oauth_client_id: None
+[0m13:33:45.819744 [info ] [MainThread]:   query_tag: None
+[0m13:33:45.819744 [info ] [MainThread]:   client_session_keep_alive: False
+[0m13:33:45.820754 [info ] [MainThread]:   host: None
+[0m13:33:45.820754 [info ] [MainThread]:   port: None
+[0m13:33:45.821763 [info ] [MainThread]:   proxy_host: None
+[0m13:33:45.821763 [info ] [MainThread]:   proxy_port: None
+[0m13:33:45.822798 [info ] [MainThread]:   protocol: None
+[0m13:33:45.822798 [info ] [MainThread]:   connect_retries: 1
+[0m13:33:45.823810 [info ] [MainThread]:   connect_timeout: None
+[0m13:33:45.823810 [info ] [MainThread]:   retry_on_database_errors: False
+[0m13:33:45.823810 [info ] [MainThread]:   retry_all: False
+[0m13:33:45.824854 [info ] [MainThread]:   insecure_mode: False
+[0m13:33:45.824854 [info ] [MainThread]:   reuse_connections: True
+[0m13:33:45.825815 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m13:33:45.825815 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m13:33:45.826762 [info ] [MainThread]: Registered adapter: snowflake=1.11.0
+[0m13:33:46.235505 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m13:33:46.331027 [debug] [MainThread]: Using snowflake connection "debug"
+[0m13:33:46.331027 [debug] [MainThread]: On debug: select 1 as id
+[0m13:33:46.335565 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:33:47.405382 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.073 seconds
+[0m13:33:47.405382 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:33:47.405382 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:33:47.405382 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\jesus.veiga\end to end dbt project\dbt_project.yml> not found
+
+[0m13:33:47.405382 [debug] [MainThread]: Command `dbt debug` failed at 13:33:47.405382 after 2.73 seconds
+[0m13:33:47.405382 [debug] [MainThread]: Connection 'debug' was left open.
+[0m13:33:47.405382 [debug] [MainThread]: On debug: Close
+[0m13:33:47.519302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDCFCC5970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDF32DA0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDF3DEAB10>]}
+[0m13:33:47.519302 [debug] [MainThread]: Flushing usage events
+[0m13:33:48.252632 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:24:44.355130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC150C94F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC170CE060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC180A3FB0>]}
+
+
+============================== 16:24:44.373086 | 3b4a322d-16d7-4705-b885-97b04165f8ae ==============================
+[0m16:24:44.373086 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:24:44.373086 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\jesus.veiga\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test -s stg_app__customers.sql', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:24:44.373086 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\jesus.veiga\end to end dbt project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:24:44.373086 [debug] [MainThread]: Command `dbt test` failed at 16:24:44.373086 after 0.29 seconds
+[0m16:24:44.373086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC150C94F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC180A0D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC180A3AA0>]}
+[0m16:24:44.373086 [debug] [MainThread]: Flushing usage events
+[0m16:24:45.094096 [debug] [MainThread]: An error was encountered while trying to flush usage events

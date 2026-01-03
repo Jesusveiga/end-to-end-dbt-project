@@ -1,0 +1,16 @@
+sources:
+  - name: customers
+    database: raw_data
+    schema: app
+    tables:
+      - name: customers
+        description: "This table contains customer information including names, contact details, and demographics."
+      - name: orders
+        description: "This table contains order details including order ID, customer ID, order date, and total amount."
+
+  - name: payments
+    database: raw_data
+    schema: stripe
+    tables:
+      - name: payments
+        description: "This table contains payment information including payment ID, customer ID, payment date, and total amount."
