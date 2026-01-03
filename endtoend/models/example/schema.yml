@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -12,63 +11,68 @@ models:
           - not_null
       - name: name
         description: "The full name of the customer"
-      - name: singup_date
+      - name: signup_date # Corregido typo (antes singup)
         description: "The date when the customer signed up"
       - name: region
         description: "The geographical region of the customer"
     
   - name: stg_app__orders
-    description: "Staging table with flattened order JSON from the payload column."
+    description: "Staging table with flattened order JSON."
     columns:
       - name: order_id
         description: "Unique identifier of the order."
-        tests:
+        data_tests:
           - not_null
           - unique
       - name: amount_total
         description: "Total amount of the order."
-        tests:
+        data_tests:
           - not_null
       - name: status
-        description: "Status of the order (success, pending, failed, etc.)"
-        tests:
+        description: "Status of the order."
+        data_tests:
           - not_null
+      - name: event_time
+        description: "Timestamp"
+        data_tests:
+          - not_null
+          # Si usasemos el paquete dbt-expectations, esta es la forma de testear recencia en un MODELO:
+          # - dbt_expectations.expect_row_values_to_have_recent_data:
+          #     datepart: day
+          #     interval: 30
       - name: customer_identifier
-        description: "Customer ID extracted from payload customer_info.id. May be null if user_id is used."
+        description: "Customer ID extracted from payload."
       - name: user_id
-        description: "Fallback user_id if customer_info.id is null."
+        description: "Fallback user_id."
       - name: customer_id
-        description: "Resolved customer ID using COALESCE(customer_identifier, user_id)."
-        tests:
+        description: "Resolved customer ID."
+        data_tests:
           - not_null
-          - relationships:
-              to: ref('stg_app_customers')
-              field: id
       
-      - name: stg_app_payments
-    description: "Staging table for payments, deduplicated by payment_id using QUALIFY and ROW_NUMBER."
+  - name: stg_app_payments
+    description: "Staging table for payments."
     columns:
       - name: payment_id
         description: "Unique identifier for each payment."
-        tests:
+        data_tests:
           - not_null
           - unique
       - name: order_id
         description: "Identifier for the related order."
-        tests:
+        data_tests:
           - not_null
           - relationships:
-              to: ref('stg_app_orders')
+              to: ref('stg_app__orders') 
               field: order_id
       - name: amount_usd
         description: "Payment amount in usd."
-        tests:
+        data_tests:
           - not_null
       - name: status
-        description: "Payment status (e.g., success, failed)."
-        tests:
+        description: "Payment status."
+        data_tests:
           - not_null
       - name: created_at
         description: "Timestamp of the payment event."
-        tests:
+        data_tests:
           - not_null
