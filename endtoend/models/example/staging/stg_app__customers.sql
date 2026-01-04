@@ -10,7 +10,7 @@ with initial_stg_app_customers AS (
 cleaned_stg_app_customers AS (
     SELECT
         ID,
-        REGEXP_REPLACE(TRIM(name), '\s+', '' ) AS name,
+        {{string_utils('name')}} AS name,
         COALESCE(TRY_TO_DATE(signup_date), '1900-01-01'::DATE) AS signup_date,
         region
     FROM initial_stg_app_customers
